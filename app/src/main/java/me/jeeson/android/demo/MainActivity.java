@@ -28,11 +28,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    if (!FloatManager.getInstance().showMenu()) {
+                    if (!FloatManager.getInstance().show()) {
                         control.setChecked(false);
                     }
                 } else {
-                    FloatManager.getInstance().dismissMenu();
+                    FloatManager.getInstance().dismiss();
                 }
             }
         });

@@ -25,11 +25,11 @@ public class FloatManager implements Application.ActivityLifecycleCallbacks {
     private Context context;
     private View mView;
 
-    public boolean showMenu() {
-        return showMenu(0, 0);
+    public boolean show() {
+        return show(0, 0);
     }
 
-    public boolean showMenu(int x, int y) {
+    public boolean show(int x, int y) {
         if (context == null) {
             Toast.makeText(context, "Please initialize in Application.", Toast.LENGTH_LONG).show();
             return false;
@@ -49,7 +49,7 @@ public class FloatManager implements Application.ActivityLifecycleCallbacks {
         return true;
     }
 
-    public Point dismissMenu() {
+    public Point dismiss() {
         if (floatTool != null) {
             Point p = floatTool.dismiss();
             floatTool = null;
@@ -78,7 +78,7 @@ public class FloatManager implements Application.ActivityLifecycleCallbacks {
     public void onActivityStarted(Activity activity) {
         visibleActivityCount++;
         if (visibleActivityCount == 1 && dismissX >= 0 && dismissY >= 0) {
-            showMenu(dismissX, dismissY);
+            show(dismissX, dismissY);
         }
     }
 
@@ -96,7 +96,7 @@ public class FloatManager implements Application.ActivityLifecycleCallbacks {
     public void onActivityStopped(Activity activity) {
         visibleActivityCount--;
         if (visibleActivityCount == 0) {
-            Point point = dismissMenu();
+            Point point = dismiss();
             dismissY = point.y;
             dismissX = point.x;
         }
