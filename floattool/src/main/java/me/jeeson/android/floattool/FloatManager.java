@@ -117,7 +117,7 @@ public class FloatManager implements Application.ActivityLifecycleCallbacks {
         this.mView = view;
     }
 
-    static FloatManager getInstance() {
+    public static FloatManager getInstance() {
         if (instance == null) {
             synchronized (FloatManager.class) {
                 if (instance == null) {

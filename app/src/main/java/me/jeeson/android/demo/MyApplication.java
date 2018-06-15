@@ -1,6 +1,8 @@
-package me.jeeson.android.floattool;
+package me.jeeson.android.demo;
 
 import android.app.Application;
+
+import me.jeeson.android.floattool.FloatManager;
 
 /**
  * Created by Jeeson on 2018/5/18.

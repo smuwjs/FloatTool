@@ -1,4 +1,4 @@
-package me.jeeson.android.floattool;
+package me.jeeson.android.demo;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
+
+import me.jeeson.android.floattool.FloatManager;
 
 public class MainActivity extends AppCompatActivity {
 
